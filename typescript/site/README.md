@@ -1,4 +1,12 @@
-# x402 Demo Site
+# x402 Search & Discovery
+
+> **⚠️ Project Notice**: This is the [HyperdustLab/x402-search](https://github.com/HyperdustLab/x402-search) project - a community-built extension of the official x402 Demo Site, **not** the official x402 implementation.
+> 
+> - **Official x402 Protocol**: [Coinbase/x402](https://github.com/coinbase/x402)
+> - **Official Website**: [x402.org](https://x402.org)
+> - **This Project Repository**: [HyperdustLab/x402-search](https://github.com/HyperdustLab/x402-search)
+> 
+> This project extends the official Demo Site with advanced search and discovery features. For a complete list of features and roadmap, see **[FEATURES_AND_ROADMAP.md](./FEATURES_AND_ROADMAP.md)**.
 
 This is a [Next.js](https://nextjs.org) project that demonstrates the x402 payment protocol in action and showcases ecosystem builders. The demo site includes a modern UI and a facilitator backend that handles payment verification and settlement.
 
@@ -21,7 +29,7 @@ x402 is an open protocol for internet-native payments built around the HTTP 402 
 - **Resource Aggregation**: Collects resources from multiple facilitators and crawlers
 - **User Submission**: Allow users to submit new x402 endpoints
 
-For detailed feature list and roadmap, see [FEATURES_AND_ROADMAP.md](./FEATURES_AND_ROADMAP.md)
+> 📖 **See [FEATURES_AND_ROADMAP.md](./FEATURES_AND_ROADMAP.md) for complete feature documentation, implementation details, and future development plans.**
 
 ## Getting Started
 

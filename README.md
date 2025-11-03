@@ -2,6 +2,17 @@
 
 > "1 line of code to accept digital dollars. No fee, 2 second settlement, $0.001 minimum payment."
 
+> **📌 Note on Extended Features**: This repository includes the [HyperdustLab/x402-search](https://github.com/HyperdustLab/x402-search) extended features for search and discovery functionality. These features are located in `typescript/site/` and include:
+> 
+> - Intelligent search with NLP-powered natural language query
+> - Automated crawler system for discovering x402 endpoints  
+> - Resource aggregation from multiple facilitators
+> - User endpoint submission functionality
+> 
+> For complete documentation of these extended features, see **[typescript/site/FEATURES_AND_ROADMAP.md](./typescript/site/FEATURES_AND_ROADMAP.md)**.
+> 
+> ⚠️ These extended features are **community-built** and **not** part of the official x402 protocol specification.
+
 ```typescript
 app.use(
   // How much you want to charge, and where you want the funds to land
