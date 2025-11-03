@@ -11,19 +11,14 @@ export function FeatureItem({
   icon,
   iconBgColor,
 }: FeatureItemProps) {
-  let iconClasses = 'rounded flex items-center justify-center flex-shrink-0';
-  if (iconBgColor) {
-    iconClasses += ` w-8 h-8 ${iconBgColor}`;
-  }
-
   return (
-    <div className="space-y-4">
-      <div className="flex items-start gap-3">
-        <div className={iconClasses}>{icon}</div>
-        <div>
-          {title && <h4 className="font-semibold text-gray-200">{title}</h4>}
-          <p className="text-gray-400 max-w-sm">{description}</p>
-        </div>
+    <div className="flex gap-4">
+      <div className="flex-shrink-0 w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center">
+        {icon}
+      </div>
+      <div className="flex-1">
+        {title && <h3 className="text-lg font-semibold text-black mb-2">{title}</h3>}
+        <p className="text-gray-700 leading-relaxed">{description}</p>
       </div>
     </div>
   );

@@ -16,6 +16,12 @@ x402 is an open protocol for internet-native payments built around the HTTP 402 
 - **Payment Middleware**: Protect routes with a simple middleware configuration
 - **Facilitator Backend**: Handle payment verification and settlement
 - **Live Demo**: Try out the payment flow with a protected route
+- **Intelligent Search**: Natural language search with NLP-powered keyword extraction
+- **Auto Discovery**: Automated crawler system for discovering x402 endpoints
+- **Resource Aggregation**: Collects resources from multiple facilitators and crawlers
+- **User Submission**: Allow users to submit new x402 endpoints
+
+For detailed feature list and roadmap, see [FEATURES_AND_ROADMAP.md](./FEATURES_AND_ROADMAP.md)
 
 ## Getting Started
 
@@ -32,14 +38,48 @@ x402 is an open protocol for internet-native payments built around the HTTP 402 
   pnpm install
   ```
 
-2. Configure your environment variables in `.env`:
+2. Configure your environment variables in `.env.local`:
 
   ```bash
-  NEXT_PUBLIC_FACILITATOR_URL=your_facilitator_url
+  # CDP API Credentials (required for session token endpoint)
+  # Get from: https://portal.cdp.coinbase.com/projects/api-keys
+  # Create a Secret API Key (not Client API Key)
+  CDP_API_KEY_ID=your_cdp_api_key_id_here
+  CDP_API_KEY_SECRET=your_cdp_api_key_secret_here
+
+  # OnchainKit API Key (required for middleware)
+  # Get from: https://onchainkit.xyz
+  NEXT_PUBLIC_ONCHAINKIT_API_KEY=your_onchainkit_api_key_here
+
+  # x402 Payment Configuration
+  NEXT_PUBLIC_FACILITATOR_URL=https://x402.org/facilitator
   RESOURCE_WALLET_ADDRESS=your_wallet_address
-  NETWORK=sepolia
+  NETWORK=base-sepolia
   PRIVATE_KEY=your_private_key
+
+  # Optional: For Solana support
+  SOLANA_ADDRESS=your_solana_address_here
   ```
+
+### Getting API Keys
+
+1. **CDP API Keys** (Required for session token endpoint):
+   - Go to [CDP Portal](https://portal.cdp.coinbase.com/)
+   - Navigate to your project's [API Keys](https://portal.cdp.coinbase.com/projects/api-keys)
+   - Click **Create API key**
+   - Select **Secret API Key** (not Client API Key)
+   - Download and securely store your `CDP_API_KEY_ID` and `CDP_API_KEY_SECRET`
+
+2. **OnchainKit API Key** (Required for middleware):
+   - Get from [OnchainKit](https://onchainkit.xyz)
+   - This is used for client-side wallet integration
+
+3. **Enable Onramp Secure Initialization** (Optional but recommended):
+   - Go to [CDP Portal](https://portal.cdp.coinbase.com/)
+   - Navigate to **Payments → [Onramp & Offramp](https://portal.cdp.coinbase.com/products/onramp)**
+   - Toggle **"Enforce secure initialization"** to **Enabled**
+
+**Note**: Without CDP API credentials, the session token endpoint will return an error. The "Get more USDC" button in the paywall will not work without these credentials.
 
 ### Running the Development Server
 
@@ -144,6 +184,13 @@ We welcome projects that are building with x402! To add your project to our ecos
 1. Our team will review your submission within 5 business days
 2. We may request additional information or changes
 3. Once approved, your project will be added to the ecosystem page, and we'd love to do some co-marketing around your use case! 
+
+## Documentation
+
+- [Features & Roadmap](./FEATURES_AND_ROADMAP.md) - Current features and future plans
+- [Crawler System](./app/api/discovery/CRAWLER_README.md) - Automated endpoint discovery
+- [Direct Discovery API](./DIRECT_DISCOVERY.md) - Resource discovery documentation
+- [Search Testing](./SEARCH_TESTING.md) - Search functionality testing guide
 
 ## Learn More
 

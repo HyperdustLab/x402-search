@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# auto-generated endpoint list
+app/api/discovery/endpoints.json
+
+# SQLite database
+*.db
+.data/
+app/api/discovery/discovery.db
+
+# JSON storage
+app/api/discovery/resources.json
