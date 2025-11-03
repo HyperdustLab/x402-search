@@ -1,5 +1,11 @@
 # x402 网站功能与路线图
 
+> **⚠️ 项目说明**: 这是 [HyperdustLab/x402-search](https://github.com/HyperdustLab/x402-search) 项目的功能文档。本项目是基于官方 [Coinbase/x402](https://github.com/coinbase/x402) Demo Site 的扩展实现，添加了搜索和发现功能，**并非** x402 协议的官方实现。
+> 
+> - **官方 x402 协议**: [Coinbase/x402](https://github.com/coinbase/x402)
+> - **官方网站**: [x402.org](https://x402.org)
+> - **本项目仓库**: [HyperdustLab/x402-search](https://github.com/HyperdustLab/x402-search)
+
 本文档记录 x402 网站的新增功能和未来开发计划。
 
 ---
@@ -333,8 +339,9 @@ typescript/site/app/mcp/
 ## 📧 反馈与贡献
 
 如有问题或建议，请通过以下方式反馈：
-- GitHub Issues: https://github.com/coinbase/x402
-- 提交 PR 欢迎！
+- GitHub Issues: https://github.com/HyperdustLab/x402-search/issues
+- 提交 PR: https://github.com/HyperdustLab/x402-search/pulls
+- 欢迎贡献代码和改进建议！
 
 ---
 
